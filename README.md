@@ -1,58 +1,182 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Venture Four Technology — Company Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A dynamic, full-stack company website for **Venture Four Technology Pvt. Ltd.**, an IT services company based in Hyderabad, India.
 
-## About Laravel
+## Tech Stack
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+| Layer | Technology |
+|-------|-----------|
+| Backend | Laravel 12 (PHP 8.2+) |
+| Frontend | Vue 3 (Composition API, `<script setup>`) |
+| SPA Bridge | Inertia.js v2 |
+| Styling | Tailwind CSS v4 |
+| UI Components | Reka-UI (headless) + Lucide Vue icons |
+| Hero Slider | Swiper v12 |
+| Authentication | Laravel Fortify |
+| Authorization | Spatie Laravel Permission |
+| Build Tool | Vite 6 |
+| Database | SQLite (dev) / MySQL (prod) |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Public Website
+- **Hero Slider** — Swiper-powered full-screen hero with CTA buttons (3 slides)
+- **About Section** — Company story with stats and "Why Choose Us" panel
+- **Services** — 6 IT service cards (Web, Mobile, Cloud, AI/ML, UI/UX, Cybersecurity)
+- **Technologies** — Color-coded tech stack badges grouped by category
+- **Portfolio** — Filterable project cards with category tabs
+- **Testimonials** — Client reviews with star ratings
+- **Stats Counter** — Key numbers (150+ projects, 80+ clients, 8+ years, 45+ team)
+- **Trusted Clients** — Partner/client logos section
+- **Contact CTA** — Call-to-action section
+- **Contact Form** — Full contact form with server-side validation
+- **Footer** — Multi-column footer with social links
 
-## Learning Laravel
+### Admin Panel
+- Secure login at `/login`
+- Dashboard at `/admin` with stats overview
+- Contact messages management at `/admin/contacts`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Getting Started
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Prerequisites
+- PHP 8.2+
+- Composer 2.x
+- Node.js 18+
+- npm
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### Installation
 
 ```bash
-composer require laravel/boost --dev
+# Clone the repository
+git clone https://github.com/pranayanakarmi/venture4tech.git
+cd venture4tech
 
-php artisan boost:install
+# Install PHP dependencies
+composer install
+
+# Install Node dependencies
+npm install
+
+# Copy environment file
+cp .env.example .env
+
+# Generate application key
+php artisan key:generate
+
+# Create SQLite database
+touch database/database.sqlite
+
+# Run migrations and seed demo data
+php artisan migrate --seed
+
+# Build frontend assets
+npm run build
+
+# Start development server
+php artisan serve
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Visit `http://localhost:8000` to see the site.
 
-## Contributing
+### Development (Hot Reload)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+# Terminal 1: Laravel dev server
+php artisan serve
 
-## Code of Conduct
+# Terminal 2: Vite dev server
+npm run dev
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Environment Variables
 
-## Security Vulnerabilities
+Key `.env` settings:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```env
+APP_NAME="Venture Four Technology"
+APP_URL=http://localhost:8000
 
-## License
+DB_CONNECTION=sqlite
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Admin user seeded automatically
+FIRST_ADMIN_EMAIL=admin@venture4tech.com
+FIRST_ADMIN_PASSWORD=password
+```
+
+## Project Structure
+
+```
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── HomeController.php        # Homepage with all dynamic sections
+│   │   ├── AboutController.php       # About page
+│   │   ├── ServicesController.php    # Services index + detail
+│   │   ├── PortfolioController.php   # Portfolio index + detail
+│   │   ├── ContactController.php     # Contact form + submission
+│   │   └── Admin/
+│   │       ├── DashboardController.php
+│   │       └── ContactController.php
+│   └── Models/                       # 20 Eloquent models
+├── database/
+│   ├── migrations/                   # 4 migration files
+│   └── seeders/                      # 12 seeders with realistic data
+├── resources/
+│   ├── css/app.css                   # Tailwind CSS v4 + design tokens
+│   └── js/
+│       ├── app.js                    # Inertia.js entry point
+│       ├── layouts/
+│       │   ├── GuestLayout.vue       # Public layout (topbar + navbar + footer)
+│       │   └── AppLayout.vue         # Admin layout (sidebar)
+│       └── pages/
+│           ├── Home.vue              # Full homepage (all sections)
+│           ├── About.vue             # About page
+│           ├── Services/Index.vue    # Services listing
+│           ├── Services/Show.vue     # Service detail
+│           ├── Portfolio/Index.vue   # Portfolio with filters
+│           ├── Portfolio/Show.vue    # Project detail
+│           ├── Contact.vue           # Contact form
+│           ├── Auth/Login.vue        # Admin login
+│           └── Admin/
+│               ├── Dashboard.vue     # Admin dashboard
+│               └── Contacts/         # Contact messages CRUD
+└── routes/
+    └── web.php                       # All routes (public + admin)
+```
+
+## Content Models
+
+| Model | Description |
+|-------|-------------|
+| `HeroSlide` | Homepage hero slider slides |
+| `Service` | IT services offered |
+| `Technology` | Technologies/tools showcased |
+| `Project` | Portfolio projects |
+| `Testimonial` | Client testimonials |
+| `TeamMember` | Team members |
+| `Partner` | Clients and technology partners |
+| `Statistic` | Key stats (projects, clients, etc.) |
+| `Contact` | Contact form submissions |
+| `SiteSetting` | Site-wide settings (name, email, social links) |
+| `Menu` / `MenuItem` | Navigation menus |
+| `FooterColumn` / `FooterLink` | Footer content |
+| `HomeAboutSection` | About section CMS content |
+| `HomeServicesSection` | Services section header |
+| `HomeProjectsSection` | Projects section header |
+| `HomeTestimonialsSection` | Testimonials section header |
+| `HomeStatsSection` | Stats section header |
+| `HomeClientsSection` | Clients section header |
+| `HomeContactCtaSection` | CTA section content |
+| `HomeTechnologiesSection` | Technologies section header |
+
+## Brand
+
+- **Company:** Venture Four Technology Pvt. Ltd.
+- **Tagline:** Innovating Tomorrow, Today
+- **Primary Color:** `#1a56db` (Blue)
+- **Email:** info@venture4tech.com
+- **Location:** Hyderabad, Telangana, India
+
+---
+
+© 2025 Venture Four Technology Pvt. Ltd. All rights reserved.
