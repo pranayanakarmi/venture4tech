@@ -3,15 +3,46 @@ import { ref } from 'vue'
 import { Link, router, usePage } from '@inertiajs/vue3'
 import {
   LayoutDashboard, MessageSquare, Settings, LogOut,
-  Menu, X, ChevronDown, Bell
+  Menu, X, ChevronDown, Bell, Layers, Briefcase,
+  Star, Users, Building2, BarChart3, Cpu,
+  Image, Wrench
 } from 'lucide-vue-next'
 
 const page = usePage()
 const sidebarOpen = ref(false)
 
-const navItems = [
-  { label: 'Dashboard', href: '/admin', icon: LayoutDashboard },
-  { label: 'Messages', href: '/admin/contacts', icon: MessageSquare },
+const navGroups = [
+  {
+    label: 'Overview',
+    items: [
+      { label: 'Dashboard', href: '/admin', icon: LayoutDashboard },
+    ]
+  },
+  {
+    label: 'Homepage Content',
+    items: [
+      { label: 'Hero Slides', href: '/admin/hero-slides', icon: Image },
+      { label: 'Services', href: '/admin/services', icon: Wrench },
+      { label: 'Projects', href: '/admin/projects', icon: Briefcase },
+      { label: 'Technologies', href: '/admin/technologies', icon: Cpu },
+      { label: 'Testimonials', href: '/admin/testimonials', icon: Star },
+      { label: 'Partners & Clients', href: '/admin/partners', icon: Building2 },
+      { label: 'Statistics', href: '/admin/statistics', icon: BarChart3 },
+    ]
+  },
+  {
+    label: 'Company',
+    items: [
+      { label: 'Team Members', href: '/admin/team-members', icon: Users },
+      { label: 'Site Settings', href: '/admin/site-settings', icon: Settings },
+    ]
+  },
+  {
+    label: 'Inbox',
+    items: [
+      { label: 'Contact Messages', href: '/admin/contacts', icon: MessageSquare },
+    ]
+  },
 ]
 
 const logout = () => router.post('/logout')
@@ -33,12 +64,17 @@ const logout = () => router.post('/logout')
         </div>
 
         <!-- Nav -->
-        <nav class="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
-          <Link v-for="item in navItems" :key="item.href" :href="item.href"
-            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">
-            <component :is="item.icon" class="w-5 h-5" />
-            {{ item.label }}
-          </Link>
+        <nav class="flex-1 px-4 py-6 space-y-4 overflow-y-auto">
+          <div v-for="group in navGroups" :key="group.label">
+            <p class="px-3 mb-1 text-xs font-semibold text-gray-500 uppercase tracking-wider">{{ group.label }}</p>
+            <div class="space-y-0.5">
+              <Link v-for="item in group.items" :key="item.href" :href="item.href"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">
+                <component :is="item.icon" class="w-5 h-5 flex-shrink-0" />
+                {{ item.label }}
+              </Link>
+            </div>
+          </div>
         </nav>
 
         <!-- User -->
