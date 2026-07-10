@@ -21,7 +21,7 @@ const submit = () => form.post('/login')
           <span class="text-white font-bold text-2xl">V4</span>
         </div>
         <h1 class="text-2xl font-bold text-white">Admin Login</h1>
-        <p class="text-gray-400 text-sm mt-1">Venture Four Technology</p>
+        <p class="text-gray-400 text-sm mt-1">Sangam</p>
       </div>
 
       <form @submit.prevent="submit" class="bg-white rounded-2xl p-8 shadow-2xl space-y-6">

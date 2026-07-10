@@ -51,7 +51,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
               <span class="text-white font-bold text-lg">V4</span>
             </div>
             <div class="hidden sm:block">
-              <div class="font-bold text-gray-900 text-sm leading-tight">Venture Four</div>
+              <div class="font-bold text-gray-900 text-sm leading-tight">Sangam</div>
               <div class="text-[#1a56db] text-xs font-medium">Technology</div>
             </div>
           </Link>
@@ -119,8 +119,8 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
                 <span class="text-white font-bold text-xl">V4</span>
               </div>
               <div>
-                <div class="font-bold text-white text-sm">Venture Four</div>
-                <div class="text-[#1a56db] text-xs font-medium">Technology Pvt. Ltd.</div>
+                <div class="font-bold text-white text-sm">Sangam</div>
+                <div class="text-[#1a56db] text-xs font-medium">Pvt. Ltd.</div>
               </div>
             </Link>
             <p class="text-sm leading-relaxed mb-6 text-gray-400">Building digital solutions that drive business growth. Your trusted technology partner since 2017.</p>
@@ -167,7 +167,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       </div>
       <div class="border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <p>© 2025 Venture Four Technology Pvt. Ltd. All rights reserved.</p>
+          <p>© 2025 Sangam Pvt. Ltd. All rights reserved.</p>
           <div class="flex gap-4">
             <Link href="/privacy" class="hover:text-[#1a56db] transition-colors">Privacy Policy</Link>
             <Link href="/terms" class="hover:text-[#1a56db] transition-colors">Terms of Service</Link>

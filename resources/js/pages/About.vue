@@ -25,7 +25,7 @@ const values = [
     <div class="bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span class="text-blue-300 font-semibold text-sm uppercase tracking-wider">Who We Are</span>
-        <h1 class="mt-3 text-4xl sm:text-5xl font-bold text-white mb-6">About Venture Four Technology</h1>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-bold text-white mb-6">About Sangam</h1>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">A passionate team of technologists, designers, and strategists committed to building digital products that make a difference.</p>
       </div>
     </div>
@@ -37,7 +37,7 @@ const values = [
           <div>
             <span class="text-[#1a56db] font-semibold text-sm uppercase tracking-wider">Our Story</span>
             <h2 class="mt-2 text-3xl font-bold text-gray-900 mb-6">Founded on a Vision to Democratize Technology</h2>
-            <p class="text-gray-600 leading-relaxed mb-4">Founded in 2017 in Hyderabad, Venture Four Technology started with a simple mission: make world-class software development accessible to businesses of all sizes. What began as a four-person startup has grown into a team of 45+ engineers, designers, and strategists.</p>
+            <p class="text-gray-600 leading-relaxed mb-4">Founded in 2017 in Hyderabad, Sangam started with a simple mission: make world-class software development accessible to businesses of all sizes. What began as a four-person startup has grown into a team of 45+ engineers, designers, and strategists.</p>
             <p class="text-gray-600 leading-relaxed mb-6">Today, we serve clients across India and internationally, delivering solutions in healthcare, fintech, education, e-commerce, logistics, and enterprise software. Our team brings deep expertise in modern technologies while maintaining the agility and personal attention of a boutique agency.</p>
             <Link href="/contact" class="inline-flex items-center gap-2 bg-[#1a56db] text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
               Work With Us <ArrowRight class="w-4 h-4" />
@@ -82,7 +82,7 @@ const values = [
         <div class="text-center mb-14">
           <span class="text-[#1a56db] font-semibold text-sm uppercase tracking-wider">Our People</span>
           <h2 class="mt-2 text-3xl font-bold text-gray-900">Meet the Team</h2>
-          <p class="mt-4 text-gray-600 max-w-2xl mx-auto">The talented individuals behind Venture Four Technology's success.</p>
+          <p class="mt-4 text-gray-600 max-w-2xl mx-auto">The talented individuals behind Sangam's success.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div v-for="member in team" :key="member.id" class="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100">

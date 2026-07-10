@@ -1,25 +1,26 @@
-# Venture Four Technology — Company Website
+# Sangam — Company Website
 
-A dynamic, full-stack company website for **Venture Four Technology Pvt. Ltd.**, an IT services company based in Hyderabad, India.
+A dynamic, full-stack company website for **Sangam Pvt. Ltd.**, an IT services company based in Hyderabad, India.
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Backend | Laravel 12 (PHP 8.2+) |
-| Frontend | Vue 3 (Composition API, `<script setup>`) |
-| SPA Bridge | Inertia.js v2 |
-| Styling | Tailwind CSS v4 |
-| UI Components | Reka-UI (headless) + Lucide Vue icons |
-| Hero Slider | Swiper v12 |
-| Authentication | Laravel Fortify |
-| Authorization | Spatie Laravel Permission |
-| Build Tool | Vite 6 |
-| Database | SQLite (dev) / MySQL (prod) |
+| Layer          | Technology                                |
+| -------------- | ----------------------------------------- |
+| Backend        | Laravel 12 (PHP 8.2+)                     |
+| Frontend       | Vue 3 (Composition API, `<script setup>`) |
+| SPA Bridge     | Inertia.js v2                             |
+| Styling        | Tailwind CSS v4                           |
+| UI Components  | Reka-UI (headless) + Lucide Vue icons     |
+| Hero Slider    | Swiper v12                                |
+| Authentication | Laravel Fortify                           |
+| Authorization  | Spatie Laravel Permission                 |
+| Build Tool     | Vite 6                                    |
+| Database       | SQLite (dev) / MySQL (prod)               |
 
 ## Features
 
 ### Public Website
+
 - **Hero Slider** — Swiper-powered full-screen hero with CTA buttons (3 slides)
 - **About Section** — Company story with stats and "Why Choose Us" panel
 - **Services** — 6 IT service cards (Web, Mobile, Cloud, AI/ML, UI/UX, Cybersecurity)
@@ -33,6 +34,7 @@ A dynamic, full-stack company website for **Venture Four Technology Pvt. Ltd.**,
 - **Footer** — Multi-column footer with social links
 
 ### Admin Panel
+
 - Secure login at `/login`
 - Dashboard at `/admin` with stats overview
 - Contact messages management at `/admin/contacts`
@@ -40,6 +42,7 @@ A dynamic, full-stack company website for **Venture Four Technology Pvt. Ltd.**,
 ## Getting Started
 
 ### Prerequisites
+
 - PHP 8.2+
 - Composer 2.x
 - Node.js 18+
@@ -94,7 +97,7 @@ npm run dev
 Key `.env` settings:
 
 ```env
-APP_NAME="Venture Four Technology"
+APP_NAME="Sangam"
 APP_URL=http://localhost:8000
 
 DB_CONNECTION=sqlite
@@ -146,32 +149,32 @@ FIRST_ADMIN_PASSWORD=password
 
 ## Content Models
 
-| Model | Description |
-|-------|-------------|
-| `HeroSlide` | Homepage hero slider slides |
-| `Service` | IT services offered |
-| `Technology` | Technologies/tools showcased |
-| `Project` | Portfolio projects |
-| `Testimonial` | Client testimonials |
-| `TeamMember` | Team members |
-| `Partner` | Clients and technology partners |
-| `Statistic` | Key stats (projects, clients, etc.) |
-| `Contact` | Contact form submissions |
-| `SiteSetting` | Site-wide settings (name, email, social links) |
-| `Menu` / `MenuItem` | Navigation menus |
-| `FooterColumn` / `FooterLink` | Footer content |
-| `HomeAboutSection` | About section CMS content |
-| `HomeServicesSection` | Services section header |
-| `HomeProjectsSection` | Projects section header |
-| `HomeTestimonialsSection` | Testimonials section header |
-| `HomeStatsSection` | Stats section header |
-| `HomeClientsSection` | Clients section header |
-| `HomeContactCtaSection` | CTA section content |
-| `HomeTechnologiesSection` | Technologies section header |
+| Model                         | Description                                    |
+| ----------------------------- | ---------------------------------------------- |
+| `HeroSlide`                   | Homepage hero slider slides                    |
+| `Service`                     | IT services offered                            |
+| `Technology`                  | Technologies/tools showcased                   |
+| `Project`                     | Portfolio projects                             |
+| `Testimonial`                 | Client testimonials                            |
+| `TeamMember`                  | Team members                                   |
+| `Partner`                     | Clients and technology partners                |
+| `Statistic`                   | Key stats (projects, clients, etc.)            |
+| `Contact`                     | Contact form submissions                       |
+| `SiteSetting`                 | Site-wide settings (name, email, social links) |
+| `Menu` / `MenuItem`           | Navigation menus                               |
+| `FooterColumn` / `FooterLink` | Footer content                                 |
+| `HomeAboutSection`            | About section CMS content                      |
+| `HomeServicesSection`         | Services section header                        |
+| `HomeProjectsSection`         | Projects section header                        |
+| `HomeTestimonialsSection`     | Testimonials section header                    |
+| `HomeStatsSection`            | Stats section header                           |
+| `HomeClientsSection`          | Clients section header                         |
+| `HomeContactCtaSection`       | CTA section content                            |
+| `HomeTechnologiesSection`     | Technologies section header                    |
 
 ## Brand
 
-- **Company:** Venture Four Technology Pvt. Ltd.
+- **Company:** Sangam Pvt. Ltd.
 - **Tagline:** Innovating Tomorrow, Today
 - **Primary Color:** `#1a56db` (Blue)
 - **Email:** info@venture4tech.com
@@ -179,4 +182,4 @@ FIRST_ADMIN_PASSWORD=password
 
 ---
 
-© 2025 Venture Four Technology Pvt. Ltd. All rights reserved.
+© 2025 Sangam Pvt. Ltd. All rights reserved.
